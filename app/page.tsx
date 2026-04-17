@@ -1,14 +1,4 @@
-import React from 'react';
-
-const Home = () => {
-
-  console.log("What type of a component am I?");
-  return (
-    <div className='text-5xl underline'>
-      <h1>Welcome to the Home Page</h1>
-      <p>This is the main landing page of the application.</p>
-    </div>
-  );
+"use client";
+export default function Home() {
+  return (<button onClick={() => console.log("결제하기 클릭")}>결제하기</button>);
 }
-
-export default Home;
