@@ -18,8 +18,7 @@ export function WidgetCheckoutPage() {
         value: 1000,
     });
     const [ready, setReady] = useState(false);
-    //const [widgets, setWidgets] = useState<any>(null);
-    const [widgets, setWidgets] = useState<TossPaymentsWidgets | null>(null);
+    const [widgets, setWidgets] = useState<any>(null);
 
     useEffect(() => {
         async function fetchPaymentWidgets() {
