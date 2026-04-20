@@ -1,5 +1,5 @@
 "use client";
-import { loadTossPayments, ANONYMOUS } from "@tosspayments/tosspayments-sdk";
+import { loadTossPayments, ANONYMOUS, TossPaymentsWidgets } from "@tosspayments/tosspayments-sdk";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -18,7 +18,8 @@ export function WidgetCheckoutPage() {
         value: 1000,
     });
     const [ready, setReady] = useState(false);
-    const [widgets, setWidgets] = useState(null);
+    //const [widgets, setWidgets] = useState<any>(null);
+    const [widgets, setWidgets] = useState<TossPaymentsWidgets | null>(null);
 
     useEffect(() => {
         async function fetchPaymentWidgets() {
