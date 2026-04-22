@@ -1,3 +1,4 @@
+"use client";
 import { loadTossPayments, ANONYMOUS } from "@tosspayments/tosspayments-sdk";
 import { useEffect, useState } from "react";
 
@@ -15,12 +16,12 @@ const amount = {
 };
 
 export function PaymentCheckoutPage() {
-    const [payment, setPayment] = useState(null);
+    const [payment, setPayment] = useState<any | null>(null);
 
-    const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(null);
+    const [selectedPaymentMethod, setSelectedPaymentMethod] = useState<string | null>(null);
     const [selectedBillingMethod, setSelectedBillingMethod] = useState("CARD");
 
-    function selectPaymentMethod(method) {
+    function selectPaymentMethod(method: string) {
         setSelectedPaymentMethod(method);
     }
 
