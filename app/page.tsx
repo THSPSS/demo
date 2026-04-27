@@ -6,6 +6,7 @@ export default function HomePage() {
   const router = useRouter();
   return (<>
     <ul>
+      <li><img src="./public/living water.png" alt="living water" /></li>
       <li><span>아이템 명 :</span><p>living water</p></li>
       <li><span>가격 :</span><p>0 won</p></li>
     </ul>
